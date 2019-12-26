@@ -1,6 +1,7 @@
 package es
 
 import (
+	"context"
 	"fmt"
 	"github.com/olivere/elastic"
 	"log"
@@ -51,7 +52,7 @@ func Client() {
 		fmt.Println(err)
 		return
 	}
-	//ctx := context.Background()
+	ctx := context.Background()
 
 	//CreateIndex(client, ctx)
 
@@ -79,7 +80,41 @@ func Client() {
 
 	//SearchWithBoolQuery(client, ctx)
 
-	FinderMain(client)
+	//FinderMain(client)
+
+	//Term(client, ctx)
+
+	//BoolQuery(client, ctx)
+
+	//IdsQuery(client, ctx)
+
+	//MatchQuery(client, ctx)
+
+	//MatchQueryWithOptions(client, ctx)
+
+	//MatchPhraseQuery(client, ctx)
+
+	//MatchPhrasePrefixQuery(client, ctx)
+
+	//DisMaxQuery(client, ctx)
+
+	//MultiMatchQuery(client, ctx)
+
+	//MultiMatchQueryXFields(client, ctx)
+
+	//PrefixQuery(client, ctx)
+
+	//QueryStringQuery(client, ctx)
+
+	//RangeQuery(client, ctx)
+
+	//RawStringQuery(client, ctx)
+
+	//TermQuery(client, ctx)
+
+	//TermsQuery(client, ctx)
+
+	SearchSortingBySorters(client, ctx)
 
 	client.Stop()
 }
