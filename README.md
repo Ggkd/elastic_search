@@ -1,0 +1,2 @@
+
+golang ElasticSearch simple demo
